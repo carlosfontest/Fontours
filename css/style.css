@@ -24,10 +24,49 @@ body {
 }
 
 .header {
+  position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom,#7ed56fc9, #28b4857c), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom,#7ed56f, #28b4857c), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
-  /* Las 4 esquinas del polígono que quiero crear */
+  /* Las n esquinas del polígono que quiero crear */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 35px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+}
+
+
