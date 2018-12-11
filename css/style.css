@@ -7,15 +7,20 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 /* ROOT */
 html {
-  font-size: 10px;
+  /* Se usa 62.5% debido a que yo quiero que eso sea 10px y el 62.5% de 16px es 10px
+  normalmente ahí pondríamos 100% desde el inicio de nuestro código y luego todos los sizes
+  a partir de ahí serían en rem's */
+  font-size: 62.5%;
 }
 
 body {
@@ -26,12 +31,14 @@ body {
   color: #777777;
   /* Borde blanco alrededor de toda la página */
   padding: 3rem;
+
+  box-sizing: border-box;
 }
 
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom,#7ed56f, #28b4857c), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b4857c), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
 
@@ -39,17 +46,17 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 3.5rem;
 }
 
-.logo {
+.header__logo {
   height: 4rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -65,7 +72,7 @@ body {
   backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -80,7 +87,7 @@ body {
   animation-iteration-count: 3; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -136,14 +143,15 @@ body {
   }
 }
 
-.btn:link, .btn:visited {
+.btn:link,
+.btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
   position: relative;
-  
+
   transition: all .2s;
 }
 
@@ -157,14 +165,9 @@ body {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
-.btn-white {
+.btn--white {
   background-color: #FFFFFF;
   color: #777777;
-}
-
-.btn-animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; /* Gives the css of 0% at the start */
 }
 
 .btn::after {
@@ -181,11 +184,17 @@ body {
   transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #FFFFFF;
 }
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  /* Gives the css of 0% at the start */
+  animation-fill-mode: backwards;
 }
