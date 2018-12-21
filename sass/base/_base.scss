@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+// ROOT
+html {
+   // Se usa 62.5% debido a que yo quiero que eso sea 10px y el 62.5% de 16px es 10px
+   // normalmente ahí pondríamos 100% desde el inicio de nuestro código y luego todos los sizes
+   // a partir de ahí serían en rem's
+   font-size: 62.5%;
+}
+
+body {
+   box-sizing: border-box;
+   // Borde blanco alrededor de toda la página
+   padding: 3rem;
+}
