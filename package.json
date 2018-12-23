@@ -4,7 +4,8 @@
   "description": "Landing page for Fontours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass --include-path scss sass/main.scss css/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/carlosfontest/Fontours#readme",
   "devDependencies": {
-    "node-sass": "^4.11.0"
-  }
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {}
 }
