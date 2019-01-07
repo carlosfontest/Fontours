@@ -30,4 +30,8 @@ body {
    box-sizing: border-box;
    // Borde blanco alrededor de toda la página
    padding: 3rem;
+
+   @include respond(tab-port) {
+      padding: 0;
+   }
 }
