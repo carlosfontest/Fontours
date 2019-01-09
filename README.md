@@ -1,7 +1,7 @@
 # Fontours [ CSS3 & SASS ]
 
 ## ***Introducción***
-Landing page de una empresa de tours, *"Fontours"* alrededor del mundo. La página muestra toda la información importante y que los clientes deberían ver para saber todo acerca de la empresa. Página hecha 
+Landing page de una empresa de tours, "Fontours" alrededor del mundo. La página muestra toda la información importante y que los clientes deberían ver para saber todo acerca de la empresa. Página hecha en SASS con CSS moderno.
 
 > Página Web basada en el curso *"Advanced CSS & SASS"* de ***Jonas Schmedtman***
 
